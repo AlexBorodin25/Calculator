@@ -38,3 +38,20 @@ def calculate(left, operator, right):
     elif operator == "÷":
         return divide(left, right)
 
+def main():
+    user_input = input("> ")
+
+    if user_input.lower() == "quit"
+        print("Goodbye!")
+        break
+    try:
+        left, operator, right = parse_input(user_input)
+        result = calculate(left, operator, right)
+        print("Result:", result)
+    except ValueError:
+        print("Error:", error)
+    except ZeroDivisionError:
+        print("Error:", error)
+
+if __name__ == "__main__":
+    main()
