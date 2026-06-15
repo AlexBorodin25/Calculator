@@ -28,3 +28,13 @@ def parse_input(user_input):
 
     return left, operator, right
 
+def calculate(left, operator, right):
+    if operator == "+":
+        return add(left, right)
+    elif operator == "-":
+        return subtract(left, right)
+    elif operator == "x":
+        return multiply(left, right)
+    elif operator == "÷":
+        return divide(left, right)
+
