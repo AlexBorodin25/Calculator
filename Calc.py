@@ -12,10 +12,10 @@ def divide(a, b):
 def parse_input(user_input):
     problem = user_input.strip().split()
 
-    left, operator, right = problem
-
     if len(problem) != 3:
         raise ValueError("Invalid input. Try (5 + 2) format.")
+
+    left, operator, right = problem
 
     try:
         left = float(left)
@@ -23,7 +23,7 @@ def parse_input(user_input):
     except ValueError:
         raise ValueError("Invalid input. Try using numbers.")
 
-    if operator not in ["+", "-", "x", "/"]:
+    if operator not in ["+", "-", "*", "/"]:
         raise ValueError("Invalid operator. Use +, -, *, /")
 
     return left, operator, right
