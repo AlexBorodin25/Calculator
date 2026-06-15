@@ -57,8 +57,6 @@ def main():
             print("Result:", result)
         except ValueError as error:
             print("Error:", error)
-        except ZeroDivisionError as error:
-            print("Error:", error)
 
 if __name__ == "__main__":
     main()
