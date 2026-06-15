@@ -39,19 +39,26 @@ def calculate(left, operator, right):
         return divide(left, right)
 
 def main():
-    user_input = input("> ")
+    print("Basic CLI Calculator")
+    print("Supported format; 5 + 2, 8 ÷ 4, etc.")
+    print("Supported operators: +, -, x, ÷")
+    print("To exit the calculator type 'quit'")
 
-    if user_input.lower() == "quit"
-        print("Goodbye!")
-        break
-    try:
-        left, operator, right = parse_input(user_input)
-        result = calculate(left, operator, right)
-        print("Result:", result)
-    except ValueError:
-        print("Error:", error)
-    except ZeroDivisionError:
-        print("Error:", error)
+    while True:
+        user_input = input("> ")
+
+        if user_input.lower() == "quit":
+            print("Goodbye!")
+            break
+
+        try:
+            left, operator, right = parse_input(user_input)
+            result = calculate(left, operator, right)
+            print("Result:", result)
+        except ValueError as error:
+            print("Error:", error)
+        except ZeroDivisionError as error:
+            print("Error:", error)
 
 if __name__ == "__main__":
     main()
