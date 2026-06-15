@@ -23,8 +23,8 @@ def parse_input(user_input):
     except ValueError:
         raise ValueError("Invalid input. Try using numbers.")
 
-    if operator not in ["+", "-", "x", "÷"]:
-        raise ValueError("Invalid operator. Use +, -, x, ÷")
+    if operator not in ["+", "-", "x", "/"]:
+        raise ValueError("Invalid operator. Use +, -, *, /")
 
     return left, operator, right
 
@@ -33,15 +33,15 @@ def calculate(left, operator, right):
         return add(left, right)
     elif operator == "-":
         return subtract(left, right)
-    elif operator == "x":
+    elif operator == "*":
         return multiply(left, right)
-    elif operator == "÷":
+    elif operator == "/":
         return divide(left, right)
 
 def main():
     print("Basic CLI Calculator")
-    print("Supported format; 5 + 2, 8 ÷ 4, etc.")
-    print("Supported operators: +, -, x, ÷")
+    print("Supported format; 5 + 2, 8 / 4, etc.")
+    print("Supported operators: +, -, *, /")
     print("To exit the calculator type 'quit'")
 
     while True:
